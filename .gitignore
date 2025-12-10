@@ -10,6 +10,7 @@
 android/
 
 # XR addons (temporary files, builds, logs)
+addons/
 addons/**/bin/
 addons/**/temp/
 addons/**/logs/
