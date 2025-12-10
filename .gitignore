@@ -1,3 +1,19 @@
 # Godot 4+ specific ignores
 .godot/
-/android/
+.import/
+.export/
+.cache/
+*.tmp
+*.log
+
+# Android export folder (if exporting for Quest or mobile)
+android/
+
+# XR addons (temporary files, builds, logs)
+addons/**/bin/
+addons/**/temp/
+addons/**/logs/
+
+# OS-specific
+.DS_Store
+Thumbs.db
