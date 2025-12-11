@@ -47,6 +47,7 @@ material_override = SubResource("StandardMaterial3D_h2yge")
 mesh = SubResource("BoxMesh_lquwl")
 
 [node name="XROrigin3D" parent="." instance=ExtResource("2_h2yge")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
 
 [node name="Node3D" parent="." instance=ExtResource("3_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4468712, 0.9071933, 0.84546876)

@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkywvvjaqj7p7"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_oa668"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_p547k"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_oa668"]
+
+[node name="Flower" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.05, 0, 0, 0, 0.5, 0, 0, 0, 0.05, 0, 0.6, 0)
+mesh = SubResource("CylinderMesh_oa668")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.1, 0, 0, 0, 0.2, 0, 1.1, 0)
+mesh = SubResource("SphereMesh_p547k")
+
+[node name="Petal" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.05, 0, 0, 0, 0.15, 0.2, 1.1, 0)
+mesh = SubResource("SphereMesh_oa668")
+
+[node name="Petal2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.14142136, 0, 0.10606602, 0, 0.05, 0, -0.14142136, 0, 0.10606602, 0.15, 1.1, -0.13)
+mesh = SubResource("SphereMesh_oa668")
+
+[node name="Petal3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8.742278e-09, 0, 0.15, 0, 0.05, 0, -0.2, 0, -6.5567085e-09, 0.00079515576, 1.1, -0.18390453)
+mesh = SubResource("SphereMesh_oa668")
+
+[node name="Petal4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.14142136, 0, 0.10606602, 0, 0.05, 0, -0.14142136, 0, -0.10606602, 0.13047989, 1.1, 0.13904029)
+mesh = SubResource("SphereMesh_oa668")
+
+[node name="Petal5" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.2, 0, -1.3113417e-08, 0, 0.05, 0, 1.7484556e-08, 0, -0.15, -0.20248501, 1.1, -0.010976948)
+mesh = SubResource("SphereMesh_oa668")
+
+[node name="Petal6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.14142136, 0, 0.10606602, 0, 0.05, 0, -0.14142136, 0, 0.10606602, -0.14760081, 1.1, 0.12440454)
+mesh = SubResource("SphereMesh_oa668")
+
+[node name="Petal7" type="MeshInstance3D" parent="."]
+transform = Transform3D(-8.742278e-09, 0, 0.15, 0, 0.05, 0, -0.2, 0, -6.5567085e-09, -0.008560464, 1.1, 0.19392471)
+mesh = SubResource("SphereMesh_oa668")
+
+[node name="Petal8" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.14142136, 0, 0.10606602, 0, 0.05, 0, -0.14142136, 0, -0.10606602, -0.14394192, 1.1, -0.13904037)
+mesh = SubResource("SphereMesh_oa668")
