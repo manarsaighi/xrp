@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5paobg3hkkja"]
+
+[ext_resource type="Script" uid="uid://dyhi31d0cdibv" path="res://bee.gd" id="1_v5qog"]
+[ext_resource type="ArrayMesh" uid="uid://cmr1obigbwid3" path="res://models/insect.obj" id="1_xww1r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q8d8k"]
+albedo_color = Color(1, 0.8833333, 0, 1)
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+script = ExtResource("1_v5qog")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_q8d8k")
+mesh = ExtResource("1_xww1r")
