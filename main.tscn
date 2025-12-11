@@ -48,31 +48,34 @@ material_override = SubResource("StandardMaterial3D_h2yge")
 mesh = SubResource("BoxMesh_lquwl")
 
 [node name="XROrigin3D" parent="." instance=ExtResource("2_h2yge")]
-transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="Node3D" parent="." instance=ExtResource("3_h2yge")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4468712, 0.9071933, 0.84546876)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4775766, 0.9071933, -0.13897121)
 
 [node name="Flower" parent="." instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5326934, 0.05000019, -1.4728898)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.533, -0.2, -1.473)
 
 [node name="Flower2" parent="." instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9683905, 0.049999952, -1.128246)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.968, -0.2, -1.128)
 
 [node name="Flower3" parent="." instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9476293, 0.05000019, 1.8624038)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.948, -0.2, 1.862)
 
 [node name="Flower4" parent="." instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6324844, 0.049999952, 2.083263)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.632, -0.2, 2.083)
 
 [node name="Flower5" parent="." instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3885741, 0.049999952, -1.721815)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.389, -0.2, -1.722)
 
 [node name="Flower6" parent="." instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9055047, 0.05000019, 1.8134786)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.906, -0.2, 1.813)
 
 [node name="Flower7" parent="." instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.179128, 0.049999714, 0.25859046)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.179, -0.2, 0.259)
 
 [node name="Flower8" parent="." instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2033689, 0.049999952, -2.0835726)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.203, -0.2, -2.084)
+
+[node name="Node3D2" parent="." instance=ExtResource("3_h2yge")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -1.1308119, 1.8874303, 0.8527874)
