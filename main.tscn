@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://bp48iihwf06aq"]
+[gd_scene load_steps=11 format=3 uid="uid://bp48iihwf06aq"]
 
 [ext_resource type="Script" uid="uid://crurqbs4exhbi" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://bnxs5mjgvg3ps" path="res://XR_Origin.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://b5paobg3hkkja" path="res://bee.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bkywvvjaqj7p7" path="res://flower.tscn" id="4_1bvp3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -51,3 +52,27 @@ transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
 
 [node name="Node3D" parent="." instance=ExtResource("3_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4468712, 0.9071933, 0.84546876)
+
+[node name="Flower" parent="." instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5326934, 0.05000019, -1.4728898)
+
+[node name="Flower2" parent="." instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9683905, 0.049999952, -1.128246)
+
+[node name="Flower3" parent="." instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9476293, 0.05000019, 1.8624038)
+
+[node name="Flower4" parent="." instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6324844, 0.049999952, 2.083263)
+
+[node name="Flower5" parent="." instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3885741, 0.049999952, -1.721815)
+
+[node name="Flower6" parent="." instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9055047, 0.05000019, 1.8134786)
+
+[node name="Flower7" parent="." instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.179128, 0.049999714, 0.25859046)
+
+[node name="Flower8" parent="." instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2033689, 0.049999952, -2.0835726)
