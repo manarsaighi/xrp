@@ -28,7 +28,6 @@ albedo_color = Color(0.27107993, 0.54, 0.09180001, 1)
 size = Vector3(5, 0.1, 5)
 
 [node name="Main" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.10933936)
 script = ExtResource("1_0xm2m")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -50,7 +49,7 @@ mesh = SubResource("BoxMesh_lquwl")
 [node name="XROrigin3D" parent="." instance=ExtResource("2_h2yge")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
-[node name="Node3D" parent="." instance=ExtResource("3_h2yge")]
+[node name="Bee" parent="." groups=["Bee"] instance=ExtResource("3_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4775766, 0.9071933, -0.13897121)
 
 [node name="Flower" parent="." instance=ExtResource("4_1bvp3")]
@@ -77,5 +76,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.179, -0.2, 0.259)
 [node name="Flower8" parent="." instance=ExtResource("4_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.203, -0.2, -2.084)
 
-[node name="Node3D2" parent="." instance=ExtResource("3_h2yge")]
+[node name="Bee1" parent="." groups=["Bee"] instance=ExtResource("3_h2yge")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -1.1308119, 1.8874303, 0.8527874)
+
+[node name="Bee2" parent="." groups=["Bee"] instance=ExtResource("3_h2yge")]
+transform = Transform3D(-0.727092, -0.01730916, -0.68632174, -0.052625746, 0.99814606, 0.030578494, 0.68452, 0.058351547, -0.7266549, 1.3515155, 1.4014243, -1.6513895)

@@ -27,4 +27,7 @@ tracker = &"right_hand"
 turn_mode = 1
 step_turn_angle = 35.0
 
+[node name="RayCast3D" type="RayCast3D" parent="RightHand"]
+target_position = Vector3(0, 0, -1)
+
 [node name="PlayerBody" parent="." instance=ExtResource("5_j4u45")]
