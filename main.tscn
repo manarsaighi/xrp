@@ -37,20 +37,23 @@ environment = SubResource("Environment_1bvp3")
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("BoxShape3D_1bvp3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, -0.05, 0)
 material_override = SubResource("StandardMaterial3D_h2yge")
 mesh = SubResource("BoxMesh_lquwl")
 
 [node name="XROrigin3D" parent="." instance=ExtResource("2_h2yge")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
+[node name="XRCamera3D2" type="XRCamera3D" parent="XROrigin3D"]
+
 [node name="Bee" parent="." groups=["Bee"] instance=ExtResource("3_h2yge")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4775766, 0.9071933, -0.13897121)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 3, 0)
 
 [node name="Flower" parent="." instance=ExtResource("4_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.533, -0.2, -1.473)
@@ -77,7 +80,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.179, -0.2, 0.259)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.203, -0.2, -2.084)
 
 [node name="Bee1" parent="." groups=["Bee"] instance=ExtResource("3_h2yge")]
-transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -1.1308119, 1.8874303, 0.8527874)
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 1, 2.5, 1)
 
 [node name="Bee2" parent="." groups=["Bee"] instance=ExtResource("3_h2yge")]
-transform = Transform3D(-0.727092, -0.01730916, -0.68632174, -0.052625746, 0.99814606, 0.030578494, 0.68452, 0.058351547, -0.7266549, 1.3515155, 1.4014243, -1.6513895)
+transform = Transform3D(-0.727092, -0.01730916, -0.68632174, -0.052625746, 0.99814606, 0.030578494, 0.68452, 0.058351547, -0.7266549, 2, 1, -2)

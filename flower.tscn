@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bkywvvjaqj7p7"]
+[gd_scene load_steps=11 format=3 uid="uid://bkywvvjaqj7p7"]
 
 [ext_resource type="Script" uid="uid://cl71ysckl6l1p" path="res://flower.gd" id="1_p547k"]
 
@@ -12,6 +12,16 @@ material = SubResource("StandardMaterial3D_p547k")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nageh"]
 albedo_color = Color(0.8022339, 0.80014426, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r72as"]
+albedo_color = Color(0.848967, 0.84326965, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_511j0"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_r72as"]
+material = SubResource("StandardMaterial3D_511j0")
+radius = 0.009
+height = 0.009
 
 [sub_resource type="SphereMesh" id="SphereMesh_oa668"]
 
@@ -28,6 +38,18 @@ mesh = SubResource("CylinderMesh_oa668")
 transform = Transform3D(0.2, 0, 0, 0, 0.1, 0, 0, 0, 0.2, 0, 1.1, 0)
 mesh = SubResource("SphereMesh_p547k")
 surface_material_override/0 = SubResource("StandardMaterial3D_nageh")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="MeshInstance3D2"]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_r72as")
+emitting = false
+amount = 50
+lifetime = 5.0
+one_shot = true
+explosiveness = 1.0
+mesh = SubResource("SphereMesh_r72as")
+initial_velocity_min = 2.0
+initial_velocity_max = 2.0
 
 [node name="Petal" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.05, 0, 0, 0, 0.15, 0.2, 1.1, 0)

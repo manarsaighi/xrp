@@ -1,45 +1,31 @@
 extends Node3D
 
 var center: Vector3
-var radius := 2.0
-var speed := 1.5
+var radius_x := 3.0
+var radius_z := 1.5
+var speed := 1.0
 var angle := 0.0
-
-var flying_to_target := false
-var target_position: Vector3 = Vector3.ZERO
 
 func _ready():
 	center = global_transform.origin
+	
+	# Randomize the oblong size per bee
+	radius_x = randf_range(2.0, 4.0)
+	radius_z = randf_range(1.0, 2.5)
+	speed = randf_range(0.8, 1.5)
+	angle = randf_range(0, PI * 2)  # start at a random position in orbit
 
 func _process(delta):
-	if flying_to_target:
-		_fly_to_flower(delta)
-	else:
-		_circle(delta)
+	_fly_ellipse(delta)
 
-func _circle(delta):
+func _fly_ellipse(delta):
 	angle += speed * delta
 
 	var orbit_pos = Vector3(
-		center.x + radius * cos(angle),
+		center.x + radius_x * cos(angle),
 		center.y,
-		center.z + radius * sin(angle)
+		center.z + radius_z * sin(angle)
 	)
 
 	global_transform.origin = orbit_pos
 	look_at(center, Vector3.UP)
-
-
-func _fly_to_flower(delta):
-	var dir := (target_position - global_transform.origin)
-	var dist := dir.length()
-
-	if dist < 0.2:
-		# Arrived at the flower
-		center = target_position
-		flying_to_target = false
-		return
-
-	dir = dir.normalized()
-	global_transform.origin += dir * speed * delta
-	look_at(target_position, Vector3.UP)
