@@ -42,14 +42,19 @@ surface_material_override/0 = SubResource("StandardMaterial3D_nageh")
 [node name="CPUParticles3D" type="CPUParticles3D" parent="MeshInstance3D2"]
 transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_r72as")
-emitting = false
-amount = 50
-lifetime = 5.0
+amount = 100
+lifetime = 10.0
 one_shot = true
 explosiveness = 1.0
+randomness = 1.0
 mesh = SubResource("SphereMesh_r72as")
+direction = Vector3(0, 10, 0)
+spread = 90.0
+gravity = Vector3(0, -0.5, 0)
 initial_velocity_min = 2.0
 initial_velocity_max = 2.0
+damping_min = 0.5
+damping_max = 0.5
 
 [node name="Petal" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.05, 0, 0, 0, 0.15, 0.2, 1.1, 0)
