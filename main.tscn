@@ -55,28 +55,28 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 [node name="Bee" parent="." groups=["Bee"] instance=ExtResource("3_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 3, 0)
 
-[node name="Flower" parent="." instance=ExtResource("4_1bvp3")]
+[node name="Flower" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.533, -0.2, -1.473)
 
-[node name="Flower2" parent="." instance=ExtResource("4_1bvp3")]
+[node name="Flower2" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.968, -0.2, -1.128)
 
-[node name="Flower3" parent="." instance=ExtResource("4_1bvp3")]
+[node name="Flower3" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.948, -0.2, 1.862)
 
-[node name="Flower4" parent="." instance=ExtResource("4_1bvp3")]
+[node name="Flower4" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.632, -0.2, 2.083)
 
-[node name="Flower5" parent="." instance=ExtResource("4_1bvp3")]
+[node name="Flower5" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.389, -0.2, -1.722)
 
-[node name="Flower6" parent="." instance=ExtResource("4_1bvp3")]
+[node name="Flower6" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.906, -0.2, 1.813)
 
-[node name="Flower7" parent="." instance=ExtResource("4_1bvp3")]
+[node name="Flower7" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.179, -0.2, 0.259)
 
-[node name="Flower8" parent="." instance=ExtResource("4_1bvp3")]
+[node name="Flower8" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.203, -0.2, -2.084)
 
 [node name="Bee1" parent="." groups=["Bee"] instance=ExtResource("3_h2yge")]

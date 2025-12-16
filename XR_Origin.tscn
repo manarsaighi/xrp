@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://bnxs5mjgvg3ps"]
+[gd_scene load_steps=9 format=3 uid="uid://bnxs5mjgvg3ps"]
 
 [ext_resource type="Script" uid="uid://ct8f8f8rma1s4" path="res://xr_origin.gd" id="1_arcfd"]
 [ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="1_kbdap"]
 [ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="2_arcfd"]
 [ext_resource type="PackedScene" uid="uid://l2n30mpbkdyw" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="2_ckb03"]
 [ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="4_723la"]
+[ext_resource type="Script" uid="uid://kl6xea86ojpm" path="res://right_hand.gd" id="4_j4u45"]
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="5_j4u45"]
+[ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="7_j4u45"]
 
 [node name="XROrigin3D" type="XROrigin3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.015916854, 0, -0.002976954)
@@ -21,16 +23,22 @@ tracker = &"left_hand"
 [node name="MovementDirect" parent="LeftHand" instance=ExtResource("2_arcfd")]
 strafe = true
 
-[node name="RightHand" type="XRController3D" parent="."]
+[node name="RightHand" type="XRController3D" parent="." groups=["RightHand"]]
 tracker = &"right_hand"
+script = ExtResource("4_j4u45")
+pointer = NodePath("FunctionPointer")
 
 [node name="RightHand" parent="RightHand" instance=ExtResource("2_ckb03")]
+visible = false
 
 [node name="MovementTurn" parent="RightHand" instance=ExtResource("4_723la")]
+visible = false
 turn_mode = 1
 step_turn_angle = 35.0
 
-[node name="RayCast3D" type="RayCast3D" parent="RightHand"]
-target_position = Vector3(0, 0, -1)
+[node name="FunctionPointer" parent="RightHand" instance=ExtResource("7_j4u45")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02, 0.05, -0.1)
+collision_mask = 5242895
+collide_with_areas = true
 
 [node name="PlayerBody" parent="." instance=ExtResource("5_j4u45")]

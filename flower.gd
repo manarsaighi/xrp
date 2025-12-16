@@ -1,19 +1,22 @@
-extends Node3D
+extends XRToolsInteractableBody
 
-@export var particle_scene: PackedScene  # Assign your CPUParticles3D scene in the inspector
+@export var particle_scene: PackedScene
 
 func _ready():
-	_test_particles()
+	call_deferred("_connect_signals")
 
-func _test_particles():
+func _connect_signals():
+	if has_signal("pointer_event"):
+		connect("pointer_event", Callable(self, "_on_pointer_event"))
+
+func _on_pointer_event(event):
+	print("Pointer event! pressed=", event.pressed)  # Debug
+	if event.pressed:
+		_emit_particles()
+
+func _emit_particles():
 	if particle_scene:
 		var particles = particle_scene.instantiate()
-		particles.global_transform.origin = global_transform.origin
+		particles.global_transform.origin = global_transform.origin + Vector3(0, 0.3, 0)
 		add_child(particles)
 		particles.emitting = true
-		
-		# Remove after lifetime
-		var lifetime = particles.lifetime
-		await get_tree().create_timer(lifetime).timeout
-		if particles.is_valid():
-			particles.queue_free()

@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://bkywvvjaqj7p7"]
+[gd_scene load_steps=12 format=3 uid="uid://bkywvvjaqj7p7"]
 
-[ext_resource type="Script" uid="uid://cl71ysckl6l1p" path="res://flower.gd" id="1_p547k"]
+[ext_resource type="Script" uid="uid://1k38dxrwxsly" path="res://area_3d.gd" id="2_511j0"]
+[ext_resource type="Script" uid="uid://bcxvnq76xbncx" path="res://addons/godot-xr-tools/objects/interactable_body.gd" id="2_nageh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p547k"]
 albedo_color = Color(1.0588765e-06, 0.6962398, 1.1551381e-06, 1)
@@ -28,20 +29,22 @@ height = 0.009
 [sub_resource type="SphereShape3D" id="SphereShape3D_nageh"]
 
 [node name="Flower" type="Node3D"]
-script = ExtResource("1_p547k")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0.5, 0, 0, 0, 0.05, 0, 0.6, 0)
+layers = 15
 mesh = SubResource("CylinderMesh_oa668")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.1, 0, 0, 0, 0.2, 0, 1.1, 0)
+layers = 15
 mesh = SubResource("SphereMesh_p547k")
 surface_material_override/0 = SubResource("StandardMaterial3D_nageh")
 
 [node name="CPUParticles3D" type="CPUParticles3D" parent="MeshInstance3D2"]
 transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_r72as")
+emitting = false
 amount = 100
 lifetime = 10.0
 one_shot = true
@@ -89,9 +92,18 @@ transform = Transform3D(-0.14142136, 0, 0.10606602, 0, 0.05, 0, -0.14142136, 0, 
 mesh = SubResource("SphereMesh_oa668")
 
 [node name="Area3D" type="Area3D" parent="."]
+collision_layer = 15
+collision_mask = 15
+monitorable = false
+script = ExtResource("2_511j0")
+particles_path = NodePath("../MeshInstance3D2/CPUParticles3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.1, 0)
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 1.2, 0)
 shape = SubResource("SphereShape3D_nageh")
+
+[node name="XRToolsInteractableBody" type="Node3D" parent="Area3D"]
+script = ExtResource("2_nageh")
+metadata/_custom_type_script = "uid://bcxvnq76xbncx"
 
 [connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]
