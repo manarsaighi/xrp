@@ -1,20 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5paobg3hkkja"]
+[gd_scene load_steps=4 format=3 uid="uid://b5paobg3hkkja"]
 
 [ext_resource type="Script" uid="uid://dyhi31d0cdibv" path="res://bee.gd" id="1_v5qog"]
-[ext_resource type="ArrayMesh" uid="uid://cmr1obigbwid3" path="res://models/insect.obj" id="1_xww1r"]
+[ext_resource type="PackedScene" uid="uid://dtxhlhkhw27ab" path="res://models/insect.glb" id="3_hoj8b"]
 [ext_resource type="AudioStream" uid="uid://dlgwpeoxsmgc4" path="res://models/bee-flying-loop-42287.mp3" id="3_q8d8k"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q8d8k"]
-albedo_color = Color(1, 0.8833333, 0, 1)
 
 [node name="Bee" type="Node3D"]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
 script = ExtResource("1_v5qog")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_q8d8k")
-mesh = ExtResource("1_xww1r")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
@@ -22,3 +14,6 @@ stream = ExtResource("3_q8d8k")
 volume_db = -9.297
 autoplay = true
 parameters/looping = true
+
+[node name="insect" parent="." instance=ExtResource("3_hoj8b")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)

@@ -25,6 +25,10 @@ BeeFacts="*res://beeFacts.gd"
 
 enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg")
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 move_forward={
