@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://bp48iihwf06aq"]
+[gd_scene load_steps=12 format=3 uid="uid://bp48iihwf06aq"]
 
 [ext_resource type="Script" uid="uid://crurqbs4exhbi" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://bnxs5mjgvg3ps" path="res://XR_Origin.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://b5paobg3hkkja" path="res://bee.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://bkywvvjaqj7p7" path="res://flower.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://dbjy84kxnxi6h" path="res://wrist.tscn" id="5_lquwl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -84,3 +85,8 @@ transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70
 
 [node name="Bee2" parent="." groups=["Bee"] instance=ExtResource("3_h2yge")]
 transform = Transform3D(-0.727092, -0.01730916, -0.68632174, -0.052625746, 0.99814606, 0.030578494, 0.68452, 0.058351547, -0.7266549, 2, 1, -2)
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+
+[node name="Control" parent="SubViewport" instance=ExtResource("5_lquwl")]
