@@ -1,6 +1,6 @@
 extends XRToolsInteractableBody
 
-@export var particles_path: NodePath  # Assign your CPUParticles3D node here
+@export var particles_path: NodePath  # Assign CPUParticles3D node here
 
 var right_hand: XRController3D = null
 var was_trigger_pressed: bool = false
@@ -33,7 +33,7 @@ func _on_pointer_event(event):
 		if trigger_pressed and not was_trigger_pressed:
 			print("Flower clicked!")
 			_emit_particles()
-			_update_wrist_display()  # <-- Update wrist UI here
+			#_update_wrist_display()  
 
 		was_trigger_pressed = trigger_pressed
 	else:
@@ -46,8 +46,7 @@ func _emit_particles():
 		particles.emitting = false
 		particles.emitting = true
 
-func _update_wrist_display():
-	# Get the wrist Label in your Viewport
-	var wrist_label = get_node_or_null("/root/Main/WristViewport/WristDisplay/Panel/Label")
-	if wrist_label:
-		wrist_label.text = BeeFacts.get_random_fact()
+#func _update_wrist_display():
+	#var wrist_label = get_node_or_null("/root/Main/WristViewport/WristDisplay/Panel/Label")
+	#if wrist_label:
+		#wrist_label.text = BeeFacts.get_random_fact()

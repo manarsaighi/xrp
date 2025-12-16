@@ -13,7 +13,7 @@ func _ready():
 	radius_x = randf_range(2.0, 4.0)
 	radius_z = randf_range(1.0, 2.5)
 	speed = randf_range(0.8, 1.5)
-	angle = randf_range(0, PI * 2)  # start at a random position in orbit
+	angle = randf_range(0, PI * 2)  # start at a random position in orbt
 
 func _process(delta):
 	_fly_ellipse(delta)

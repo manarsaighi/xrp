@@ -1,8 +1,8 @@
 extends Node3D
 
 @export var flower_scene: PackedScene
-@export var number_of_flowers: int = 20
-@export var area_size: Vector2 = Vector2(10, 10)  # XZ area size
+@export var number_of_flowers: int = 30
+@export var area_size: Vector2 = Vector2(20, 20)  # XZ area size
 @export var y_height: float = 0.0  # All flowers at the same height
 @export var min_scale: float = 0.8
 @export var max_scale: float = 1.2
