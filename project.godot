@@ -52,6 +52,16 @@ move_right={
 ]
 }
 
+[rendering]
+
+global_illumination/gi/use_half_resolution=true
+anti_aliasing/screen_space_roughness_limiter/amount=0.15000000000000002
+anti_aliasing/screen_space_roughness_limiter/limit=0.15000000000000002
+limits/screen_space_roughness_limiter/limit=0.15000000000000002
+limits/screen_space_roughness_limiter/amount=0.15000000000000002
+limits/gi/use_half_resolution=true
+limits/autoload_on_startup=false
+
 [xr]
 
 openxr/enabled=true
