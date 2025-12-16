@@ -116,5 +116,7 @@ script = ExtResource("7_272bh")
 counter_label_path = NodePath("PollinationCounter")
 
 [node name="PollinationCounter" type="Label" parent="CanvasLayer"]
-offset_right = 332.0
-offset_bottom = 177.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 352.0
+offset_bottom = 197.0

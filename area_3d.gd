@@ -4,11 +4,15 @@ extends XRToolsInteractableBody
 
 var right_hand: XRController3D = null
 var was_trigger_pressed: bool = false
+var pollination_manager: Node = null  # Reference to your CanvasLayer script
 
 func _ready():
 	# Deferred lookup to ensure RightHand exists
 	call_deferred("_find_right_hand")
 	call_deferred("_connect_signals")
+	
+	# Get the pollination manager (HUD CanvasLayer)
+	pollination_manager = get_tree().get_root().get_node("Main/CanvasLayer") 
 
 func _find_right_hand():
 	var hands = get_tree().get_nodes_in_group("RightHand")
@@ -25,7 +29,6 @@ func _on_pointer_event(event):
 	if right_hand == null:
 		return  # Safety check
 
-	# Pointer is hovering
 	if event.pressed:
 		var trigger_pressed = right_hand.is_button_pressed("trigger_click")
 
@@ -33,7 +36,9 @@ func _on_pointer_event(event):
 		if trigger_pressed and not was_trigger_pressed:
 			print("Flower clicked!")
 			_emit_particles()
-			#_update_wrist_display()  
+			# Update the counter on HUD
+			if pollination_manager:
+				pollination_manager.increment_count()
 
 		was_trigger_pressed = trigger_pressed
 	else:
@@ -45,8 +50,3 @@ func _emit_particles():
 	if particles:
 		particles.emitting = false
 		particles.emitting = true
-
-#func _update_wrist_display():
-	#var wrist_label = get_node_or_null("/root/Main/WristViewport/WristDisplay/Panel/Label")
-	#if wrist_label:
-		#wrist_label.text = BeeFacts.get_random_fact()
