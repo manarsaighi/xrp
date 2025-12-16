@@ -1,11 +1,17 @@
 extends Node
 
+@export var counter_label_path: NodePath
+var counter_label: Label
+var pollination_count: int = 0
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _ready():
+	counter_label = get_node(counter_label_path)
+	_update_label()
 
+func increment_count():
+	pollination_count += 1
+	_update_label()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _update_label():
+	if counter_label:
+		counter_label.text = "Flowers Pollinated: %d" % pollination_count
