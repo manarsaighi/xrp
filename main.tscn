@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bnxs5mjgvg3ps" path="res://XR_Origin.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://b5paobg3hkkja" path="res://bee.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://bkywvvjaqj7p7" path="res://flower.tscn" id="4_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://dbjy84kxnxi6h" path="res://wrist.tscn" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://bo7u4oaxinmy8" path="res://flower_manager.gd" id="5_lquwl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -58,27 +58,35 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 3, 0)
 
 [node name="Flower" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.533, -0.2, -1.473)
+visible = false
 
 [node name="Flower2" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.968, -0.2, -1.128)
+visible = false
 
 [node name="Flower3" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.948, -0.2, 1.862)
+visible = false
 
 [node name="Flower4" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.632, -0.2, 2.083)
+visible = false
 
 [node name="Flower5" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.389, -0.2, -1.722)
+visible = false
 
 [node name="Flower6" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.906, -0.2, 1.813)
+visible = false
 
 [node name="Flower7" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.179, -0.2, 0.259)
+visible = false
 
 [node name="Flower8" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.203, -0.2, -2.084)
+visible = false
 
 [node name="Bee1" parent="." groups=["Bee"] instance=ExtResource("3_h2yge")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 1, 2.5, 1)
@@ -86,7 +94,15 @@ transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70
 [node name="Bee2" parent="." groups=["Bee"] instance=ExtResource("3_h2yge")]
 transform = Transform3D(-0.727092, -0.01730916, -0.68632174, -0.052625746, 0.99814606, 0.030578494, 0.68452, 0.058351547, -0.7266549, 2, 1, -2)
 
-[node name="SubViewport" type="SubViewport" parent="."]
-transparent_bg = true
+[node name="Bee3" parent="." groups=["Bee"] instance=ExtResource("3_h2yge")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -3.334, 6, -2.145)
 
-[node name="Control" parent="SubViewport" instance=ExtResource("5_lquwl")]
+[node name="Bee4" parent="." groups=["Bee"] instance=ExtResource("3_h2yge")]
+transform = Transform3D(-0.91928315, -0.06041705, 0.38893196, -0.052310128, 0.9981367, 0.031410757, -0.39010504, 0.0085303, -0.92073077, -5, 5.5, -2)
+
+[node name="Bee5" parent="." groups=["Bee"] instance=ExtResource("3_h2yge")]
+transform = Transform3D(-0.16663784, -0.039737307, 0.98521703, -0.052310128, 0.9981367, 0.031410757, -0.9846296, -0.046302617, -0.16840601, 4, 7, -2)
+
+[node name="FlowerManager" type="Node3D" parent="."]
+script = ExtResource("5_lquwl")
+flower_scene = ExtResource("4_1bvp3")

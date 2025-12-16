@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bnxs5mjgvg3ps"]
+[gd_scene load_steps=9 format=3 uid="uid://bnxs5mjgvg3ps"]
 
 [ext_resource type="Script" uid="uid://ct8f8f8rma1s4" path="res://xr_origin.gd" id="1_arcfd"]
 [ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="1_kbdap"]
@@ -8,11 +8,6 @@
 [ext_resource type="Script" uid="uid://kl6xea86ojpm" path="res://right_hand.gd" id="4_j4u45"]
 [ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="5_j4u45"]
 [ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="7_j4u45"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j4u45"]
-albedo_color = Color(0, 0.7058824, 0.7058824, 0.45490196)
-
-[sub_resource type="QuadMesh" id="QuadMesh_w4e0x"]
 
 [node name="XROrigin3D" type="XROrigin3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.015916854, 0, -0.002976954)
@@ -45,10 +40,5 @@ step_turn_angle = 35.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02, 0.05, -0.1)
 collision_mask = 5242895
 collide_with_areas = true
-
-[node name="WristDisplay" type="MeshInstance3D" parent="RightHand"]
-transform = Transform3D(-1.7484556e-08, 0.14142136, 0.70710677, 0, 0.14142136, -0.70710677, -0.4, -6.181724e-09, -3.090862e-08, 0, 0, 0.15)
-material_override = SubResource("StandardMaterial3D_j4u45")
-mesh = SubResource("QuadMesh_w4e0x")
 
 [node name="PlayerBody" parent="." instance=ExtResource("5_j4u45")]
