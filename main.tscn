@@ -60,38 +60,6 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 [node name="Bee" parent="." groups=["Bee"] instance=ExtResource("3_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.010403, 3.5231125, 3.7054806)
 
-[node name="Flower" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.533, -0.2, -1.473)
-visible = false
-
-[node name="Flower2" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.968, -0.2, -1.128)
-visible = false
-
-[node name="Flower3" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.948, -0.2, 1.862)
-visible = false
-
-[node name="Flower4" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.632, -0.2, 2.083)
-visible = false
-
-[node name="Flower5" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.389, -0.2, -1.722)
-visible = false
-
-[node name="Flower6" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.906, -0.2, 1.813)
-visible = false
-
-[node name="Flower7" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.179, -0.2, 0.259)
-visible = false
-
-[node name="Flower8" parent="." groups=["flower"] instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.203, -0.2, -2.084)
-visible = false
-
 [node name="Bee1" parent="." groups=["Bee"] instance=ExtResource("3_h2yge")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 6, 2.517, 4)
 
