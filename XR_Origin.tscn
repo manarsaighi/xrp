@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="7_j4u45"]
 
 [node name="XROrigin3D" type="XROrigin3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.015916854, 0, -0.002976954)
 
 [node name="XRCamera3D" type="XRCamera3D" parent="."]
 
