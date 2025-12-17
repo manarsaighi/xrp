@@ -32,7 +32,7 @@ The bee code uses cos(angle) and sin(angle) multiplied by different radii to cre
 
 ![Flower Code](image-1.png)
 
-The flower code consists of a pointer event that allows it to register input from a user. The emit_particls method then instantiates the CPUparticles into the scene.
+The flower code consists of a pointer event that allows it to register input from a user, and a method for allowing the pollen particles to appear on click.
 
 ![Flower Manager](image-2.png)
 
@@ -41,6 +41,8 @@ The flower manager is in charger of procedural generation of the flowers. From h
 ![Pollen](image-3.png)
 
 ![Pollen aprticales](image-4.png)
+
+The pollen particles are CPU Particles with colour and gravity applied to give the appearance of pollen. The emit_pollen function will instantiate pollen particles when a user clicks on a flower's collision model.
 
 
 # References
