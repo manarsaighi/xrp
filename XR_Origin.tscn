@@ -29,10 +29,8 @@ script = ExtResource("4_j4u45")
 pointer = NodePath("FunctionPointer")
 
 [node name="RightHand" parent="RightHand" instance=ExtResource("2_ckb03")]
-visible = false
 
 [node name="MovementTurn" parent="RightHand" instance=ExtResource("4_723la")]
-visible = false
 turn_mode = 1
 step_turn_angle = 35.0
 

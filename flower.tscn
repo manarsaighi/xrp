@@ -9,6 +9,7 @@ albedo_color = Color(1.0588765e-06, 0.6962398, 1.1551381e-06, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_oa668"]
 material = SubResource("StandardMaterial3D_p547k")
+height = 5.0
 
 [sub_resource type="SphereMesh" id="SphereMesh_p547k"]
 
@@ -30,7 +31,7 @@ height = 0.009
 [node name="Flower" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.05, 0, 0, 0, 0.5, 0, 0, 0, 0.05, 0, 0.6, 0)
+transform = Transform3D(0.05, 0, 0, 0, 0.5, 0, 0, 0, 0.05, 0, -0.15, 0)
 layers = 15
 mesh = SubResource("CylinderMesh_oa668")
 
