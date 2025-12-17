@@ -19,6 +19,8 @@ This project consists of a simple "pollination" interaction. The small flower fi
 
 # Instructions for use
 
+The experience consists of a single interaction. Users can move around the flower field and click on flowers to trigger a pollen particle effect.
+
 # How it works:
 
 # List of classes/assets in the project
@@ -26,9 +28,9 @@ This project consists of a simple "pollination" interaction. The small flower fi
 
 # References
 
-Bee model
-Bee Buzzing sounds effect
-Background Music
+Bee model: https://www.cgtrader.com/free-3d-models/animals/insect/low-poly-flying-bee
+Bee Buzzing sounds effect: https://pixabay.com/sound-effects/bee-flying-loop-42287/
+Background Music: https://opengameart.org/content/underwater-theme
 
 # What I am most proud of in the assignment
 
@@ -36,6 +38,14 @@ Procedural Generation
 
 # What I learned
 
+Procedural Generation
+Particles
+Gravity
+Creating Models
+Importing Models
+Working with Blender
+XRTools
 
 # Proposal submitted earlier can go here (if there is one):
 
+https://github.com/manarsaighi/pollenXR
