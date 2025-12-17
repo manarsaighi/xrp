@@ -51,6 +51,8 @@ Bee Buzzing sounds effect: https://pixabay.com/sound-effects/bee-flying-loop-422
 
 Background Music: https://opengameart.org/content/underwater-theme
 
+I also used tutorials by Muddy Wolf on youtube to setup controller based movement.
+
 # What I am most proud of in the assignment
 
 I'm most proud of getting the click event to trigger the pollen particles as well as the procedural generation. 
