@@ -3,7 +3,7 @@ extends XROrigin3D
 # === Settings ===
 @export var speed: float = 1.0               # Movement speed
 @export var mouse_sensitivity: float = 0.1   # Mouse look sensitivity
-@export var emulator_height: float = 1.6     # Camera height for emulator
+@export var emulator_height: float = 1     # Camera height for emulator
 
 # Internal
 var rotation_x: float = 0.0
