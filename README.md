@@ -26,7 +26,13 @@ The experience consists of a single interaction. Users can move around the flowe
 
 # How it works:
 
-# List of classes/assets in the project
+
+
+# Code Snippers
+
+![Bee Code](image.png)
+
+The bee code uses cos(angle) and sin(angle) multiplied by different radii to create different sized oblongs for the bees to fly along.
 
 
 # References
