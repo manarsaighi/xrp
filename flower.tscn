@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://1k38dxrwxsly" path="res://area_3d.gd" id="2_511j0"]
 [ext_resource type="Script" uid="uid://bcxvnq76xbncx" path="res://addons/godot-xr-tools/objects/interactable_body.gd" id="2_nageh"]
+[ext_resource type="PackedScene" uid="uid://bkxvxponwnraf" path="res://Untitled.glb" id="4_r72as"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p547k"]
 albedo_color = Color(1.0588765e-06, 0.6962398, 1.1551381e-06, 1)
@@ -23,8 +24,6 @@ albedo_color = Color(0.848967, 0.84326965, 0, 1)
 material = SubResource("StandardMaterial3D_511j0")
 radius = 0.009
 height = 0.009
-
-[sub_resource type="SphereMesh" id="SphereMesh_oa668"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_nageh"]
 
@@ -59,38 +58,6 @@ initial_velocity_max = 2.0
 damping_min = 0.5
 damping_max = 0.5
 
-[node name="Petal" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, 0.05, 0, 0, 0, 0.15, 0.2, 1.1, 0)
-mesh = SubResource("SphereMesh_oa668")
-
-[node name="Petal2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.14142136, 0, 0.10606602, 0, 0.05, 0, -0.14142136, 0, 0.10606602, 0.15, 1.1, -0.13)
-mesh = SubResource("SphereMesh_oa668")
-
-[node name="Petal3" type="MeshInstance3D" parent="."]
-transform = Transform3D(-8.742278e-09, 0, 0.15, 0, 0.05, 0, -0.2, 0, -6.5567085e-09, 0.00079515576, 1.1, -0.18390453)
-mesh = SubResource("SphereMesh_oa668")
-
-[node name="Petal4" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.14142136, 0, 0.10606602, 0, 0.05, 0, -0.14142136, 0, -0.10606602, 0.13047989, 1.1, 0.13904029)
-mesh = SubResource("SphereMesh_oa668")
-
-[node name="Petal5" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.2, 0, -1.3113417e-08, 0, 0.05, 0, 1.7484556e-08, 0, -0.15, -0.20248501, 1.1, -0.010976948)
-mesh = SubResource("SphereMesh_oa668")
-
-[node name="Petal6" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.14142136, 0, 0.10606602, 0, 0.05, 0, -0.14142136, 0, 0.10606602, -0.14760081, 1.1, 0.12440454)
-mesh = SubResource("SphereMesh_oa668")
-
-[node name="Petal7" type="MeshInstance3D" parent="."]
-transform = Transform3D(-8.742278e-09, 0, 0.15, 0, 0.05, 0, -0.2, 0, -6.5567085e-09, -0.008560464, 1.1, 0.19392471)
-mesh = SubResource("SphereMesh_oa668")
-
-[node name="Petal8" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.14142136, 0, 0.10606602, 0, 0.05, 0, -0.14142136, 0, -0.10606602, -0.14394192, 1.1, -0.13904037)
-mesh = SubResource("SphereMesh_oa668")
-
 [node name="Area3D" type="Area3D" parent="."]
 collision_layer = 15
 collision_mask = 15
@@ -105,5 +72,8 @@ shape = SubResource("SphereShape3D_nageh")
 [node name="XRToolsInteractableBody" type="Node3D" parent="Area3D"]
 script = ExtResource("2_nageh")
 metadata/_custom_type_script = "uid://bcxvnq76xbncx"
+
+[node name="Untitled" parent="." instance=ExtResource("4_r72as")]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
 
 [connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]
