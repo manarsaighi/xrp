@@ -4,15 +4,13 @@ extends XRToolsInteractableBody
 
 var right_hand: XRController3D = null
 var was_trigger_pressed: bool = false
-var pollination_manager: Node = null  # Reference to your CanvasLayer script
+#var pollination_manager: Node = null 
 
 func _ready():
 	# Deferred lookup to ensure RightHand exists
 	call_deferred("_find_right_hand")
 	call_deferred("_connect_signals")
-	
-	# Get the pollination manager (HUD CanvasLayer)
-	pollination_manager = get_tree().get_root().get_node("Main/CanvasLayer") 
+
 
 func _find_right_hand():
 	var hands = get_tree().get_nodes_in_group("RightHand")
@@ -36,9 +34,6 @@ func _on_pointer_event(event):
 		if trigger_pressed and not was_trigger_pressed:
 			print("Flower clicked!")
 			_emit_particles()
-			# Update the counter on HUD
-			if pollination_manager:
-				pollination_manager.increment_count()
 
 		was_trigger_pressed = trigger_pressed
 	else:

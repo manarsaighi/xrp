@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bp48iihwf06aq"]
+[gd_scene load_steps=14 format=3 uid="uid://bp48iihwf06aq"]
 
 [ext_resource type="Script" uid="uid://crurqbs4exhbi" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://cj3bo04cmin4b" path="res://models/grass.jpeg" id="2_7mycd"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://b5paobg3hkkja" path="res://bee.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://bkywvvjaqj7p7" path="res://flower.tscn" id="4_1bvp3"]
 [ext_resource type="Script" uid="uid://bo7u4oaxinmy8" path="res://flower_manager.gd" id="5_lquwl"]
-[ext_resource type="Script" uid="uid://ct66yoov1jhtl" path="res://PollinationManager.gd" id="7_272bh"]
 [ext_resource type="AudioStream" uid="uid://deat5jkcrsx1i" path="res://addons/xr-simulator/Cleyton RX - Underwater.mp3" id="8_5vw27"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
@@ -79,16 +78,6 @@ transform = Transform3D(-0.16663784, -0.039737307, 0.98521703, -0.052310128, 0.9
 [node name="FlowerManager" type="Node3D" parent="."]
 script = ExtResource("5_lquwl")
 flower_scene = ExtResource("4_1bvp3")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-script = ExtResource("7_272bh")
-counter_label_path = NodePath("PollinationCounter")
-
-[node name="PollinationCounter" type="Label" parent="CanvasLayer"]
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 352.0
-offset_bottom = 197.0
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("8_5vw27")
