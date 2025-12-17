@@ -28,11 +28,23 @@ The experience consists of a single interaction. Users can move around the flowe
 
 
 
-# Code Snippers
+# Code Snippets
 
 ![Bee Code](image.png)
 
 The bee code uses cos(angle) and sin(angle) multiplied by different radii to create different sized oblongs for the bees to fly along.
+
+![Flower Code](image-1.png)
+
+The flower code
+
+![Flower Manager](image-2.png)
+
+The flower manager is in charger of procedural generation of the flowers. From here you can control the amount og flowers spawned, how far apart they spawn from each other, and where they spawn on the y-axis.
+
+![Pollen](image-3.png)
+
+![Pollen aprticales](image-4.png)
 
 
 # References
