@@ -1,6 +1,5 @@
-[gd_scene load_steps=9 format=3 uid="uid://bnxs5mjgvg3ps"]
+[gd_scene load_steps=8 format=3 uid="uid://bnxs5mjgvg3ps"]
 
-[ext_resource type="Script" uid="uid://ct8f8f8rma1s4" path="res://xr_origin.gd" id="1_arcfd"]
 [ext_resource type="PackedScene" uid="uid://b4kad2kuba1yn" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/left_hand_low.tscn" id="1_kbdap"]
 [ext_resource type="PackedScene" uid="uid://bl2nuu3qhlb5k" path="res://addons/godot-xr-tools/functions/movement_direct.tscn" id="2_arcfd"]
 [ext_resource type="PackedScene" uid="uid://l2n30mpbkdyw" path="res://addons/godot-xr-tools/hands/scenes/lowpoly/right_hand_low.tscn" id="2_ckb03"]
@@ -11,7 +10,6 @@
 
 [node name="XROrigin3D" type="XROrigin3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.015916854, 0, -0.002976954)
-script = ExtResource("1_arcfd")
 
 [node name="XRCamera3D" type="XRCamera3D" parent="."]
 
