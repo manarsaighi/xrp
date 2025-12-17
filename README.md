@@ -32,7 +32,7 @@ The bee code uses cos(angle) and sin(angle) multiplied by different radii to cre
 
 ![Flower Code](image-1.png)
 
-The flower code
+The flower code consists of a pointer event that allows it to register input from a user. The emit_particls method then instantiates the CPUparticles into the scene.
 
 ![Flower Manager](image-2.png)
 
@@ -59,11 +59,11 @@ For procedural generation, some issues I encountered were the flowers all spawni
 
 # What I learned
 
-Procedural Generation
+Procedural Generation: I learned how to procedurally generate my flower models onto a set area. Every time the scene is reloaded, flowers spawn in dynamic locations.
 
-Particles
+Particles: I learned about CPU particles and GPU particles. CPU particles were chosen here because the animation is simple and I wanted an option that minimises latency. 
 
-Gravity
+Gravity: I learned about the different effects of gravity on the CPU particles. I settled on a -0.5 gravity level on the y axis to creata a slow fall effect, like pollen scattering to the ground from a flower.
 
 Creating Models: I created a simple flower model using 3D meshes in Godot. I learned that too many meshes cause lag as Godot tries to render many copies of meshes per model. I used Blender to combine petal meshes together as a single mesh, reducing mesh amounts significantly (8x30 meshes to 1x30 meshes). 
 
@@ -71,7 +71,7 @@ Importing Models: I imported a low poly bee model from a free 3D models website.
 
 Working with Blender: I used Blender for the first time with this assignment to colour the bee models I imported. I learned that .mtl files work strangely in Godot and this was easier.
 
-XRTools
+XRTools: I learned to use XRTools. The XRtools plugin addons were helpful for movement. I also set up the Meta XR Simulator as a fallback, as my laptop had trouble connecting to headset.
 
 # Proposal submitted earlier:
 
