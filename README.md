@@ -24,10 +24,6 @@ This project consists of a simple "pollination" interaction. The small flower fi
 
 The experience consists of a single interaction. Users can move around the flower field and click on flowers to trigger a pollen particle effect.
 
-# How it works:
-
-
-
 # Code Snippets
 
 ![Bee Code](image.png)
@@ -40,7 +36,7 @@ The flower code
 
 ![Flower Manager](image-2.png)
 
-The flower manager is in charger of procedural generation of the flowers. From here you can control the amount og flowers spawned, how far apart they spawn from each other, and where they spawn on the y-axis.
+The flower manager is in charger of procedural generation of the flowers. From here you can control the amount of flowers spawned, how far apart they spawn from each other, and where they spawn on the y-axis.
 
 ![Pollen](image-3.png)
 
@@ -57,7 +53,9 @@ Background Music: https://opengameart.org/content/underwater-theme
 
 # What I am most proud of in the assignment
 
-Procedural Generation
+I'm most proud of getting the click event to trigger the pollen particles as well as the procedural generation. 
+
+For procedural generation, some issues I encountered were the flowers all spawning at the origin (0,0) on the ground (i.e where the player spawns). There were also issues with the flowers spawing closely together. To fix this I added parts to the script that set a minimum distance apart from each flower. I also used random values within the defined area to stop the flowers from spawning in one place.
 
 # What I learned
 
@@ -67,14 +65,14 @@ Particles
 
 Gravity
 
-Creating Models
+Creating Models: I created a simple flower model using 3D meshes in Godot. I learned that too many meshes cause lag as Godot tries to render many copies of meshes per model. I used Blender to combine petal meshes together as a single mesh, reducing mesh amounts significantly (8x30 meshes to 1x30 meshes). 
 
-Importing Models
+Importing Models: I imported a low poly bee model from a free 3D models website. I learned that models come as .obj files.
 
-Working with Blender
+Working with Blender: I used Blender for the first time with this assignment to colour the bee models I imported. I learned that .mtl files work strangely in Godot and this was easier.
 
 XRTools
 
-# Proposal submitted earlier can go here (if there is one):
+# Proposal submitted earlier:
 
 https://github.com/manarsaighi/pollenXR
